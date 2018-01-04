@@ -5,6 +5,7 @@ import Vue from 'vue'
 import App from './app'
 import router from './router'
 import vueTap from 'v-tap'
+import './css/iconfont.css'
 //全局引用swiper
 import { Swipe, SwipeItem } from 'vue-swipe';
 import 'vue-swipe/dist/vue-swipe.css'
@@ -32,7 +33,6 @@ initProject()
 function initProject(){
 	init()
 	.then(res=>{
-		alert(res)
 //			Vue.directive('go', {
 //			    bind (el, binding) {
 //			      el.addEventListener('click', () => {
@@ -50,7 +50,6 @@ function initProject(){
 //			})
 			//导航守卫
 			router.beforeEach((to, from, next) => {
-				alert(0)
 			    next()
 			})
 			

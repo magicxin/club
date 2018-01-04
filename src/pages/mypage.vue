@@ -1,14 +1,14 @@
 <template>
 	<div class="home">
-		<ma-header name="帖子" :hideReturn="true"></ma-header>
-		<div>111</div>
+		<ma-header name="我的" :hideReturn="true"></ma-header>
+		<div>222</div>
 		<ma-footer></ma-footer>
 	</div>
 </template>
 
 <script>
-	import maFooter from 'components/maFooter'
 	import maHeader from 'components/maHeader'
+	import maFooter from 'components/maFooter'
 	export default {
 		components:{
 			maFooter,maHeader
