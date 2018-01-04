@@ -17,9 +17,9 @@ let otherRoutes = [{
 	  component:resolve => {require.ensure([], function(require){resolve(require('../pages/mypage'));}, 'mypage')},
 	 },
 	 {
-	   path: '/dynamic',
-	   name: 'dynamic', // 动态
-	  component:resolve => {require.ensure([], function(require){resolve(require('../pages/dynamic'));}, 'dynamic')},
+	   path: '/mydynamic',
+	   name: 'mydynamic', // 动态
+	  component:resolve => {require.ensure([], function(require){resolve(require('../pages/mydynamic'));}, 'mydynamic')},
 	 },
 	  {
 		path: '*',

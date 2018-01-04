@@ -6,6 +6,7 @@ import App from './app'
 import router from './router'
 import vueTap from 'v-tap'
 import './css/iconfont.css'
+import './css/common.css'
 //全局引用swiper
 import { Swipe, SwipeItem } from 'vue-swipe';
 import 'vue-swipe/dist/vue-swipe.css'
