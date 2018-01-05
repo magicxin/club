@@ -1,5 +1,5 @@
 <template>
-	<div class="home">
+	<div class="mypage">
 		<ma-header name="我的" :hideReturn="true"></ma-header>
 		<div class="column">
 			<div class="row">
@@ -39,35 +39,25 @@
 </script>
 
 <style>
-	.home {
+	.mypage {
 		height:100%;
 	}
-	.home .column{
+	.mypage .column{
 		background:#eee;
 	}
-	.home .row {
+	.mypage .row {
 		margin-bottom: 1em;
 		background:#fff;
 	}
-	.home .left{
-		flex:1 1 0;
-		padding :4px;
+	.mypage .left{
 		overflow: hidden;
 	}
-	.home .cover{
+	.mypage .cover{
 		width:15vw;
 		height:15vw;
 	}
-	.home .left img{
+	.mypage .left img{
 		width:100%;
 		object-fit : cover;
-	}
-	.home .middle{
-		padding :4px;
-		flex:4 1 0;
-	}
-	.home .right{
-		padding :4px;
-		flex:1 1 0;
 	}
 </style>

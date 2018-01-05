@@ -1,11 +1,11 @@
 <template>
   <div class="dynamic">
     <div class="dynamic-item">
-      <div class="top">
+      <div class="top row">
         <div class="left co-center">
           <img :src="itemData.avatar || defaultAvatar" />
         </div>
-        <div class="right">
+        <div class="right column ro-center">
           <div class="dynamic-title">
             {{itemData.name}}
           </div>
@@ -33,11 +33,11 @@
         <magic-image v-if="itemData.images.length>0" :bigImage="itemData.images"></magic-image>
         <!--end 发图片 -->
       </div>
-      <div class='bottom' v-if="showBottom">
-        <div class="reply" v-tap="{methods:goComment,id:itemData.id}">
-          <i class="iconfont icon-pinglun"></i>{{itemData.commentCount}}
+      <div class='bottom row' v-if="showBottom">
+        <div class="left center">
+          <i class="iconfont icon-pinglun" center></i>{{itemData.commentCount}}
         </div>
-        <div class="like" v-tap="{methods:like,id:itemData.id}">
+        <div class="right center" v-tap="{methods:like,id:itemData.id}">
           <i v-show="itemData.isSupport === '0'" class="iconfont icon-xihuan"></i>
           <i v-show="itemData.isSupport === '1'" class="iconfont icon-xihuan1"></i>{{itemData.supportCount}}
         </div>
@@ -157,115 +157,20 @@ export default {
 };
 </script>
 
-<style scoped>
-.dynamic-item {
-  display: flex;
-  flex-flow: column;
-  padding: 1em;
-  border-bottom:4px solid #eee;
-}
-
-.top {
-  display: flex;
-}
-
-.top .left {
-  padding: 4px;
-}
-
-.top .left img {
-  width: 40px;
-  height: 40px;
-  flex: 1 1 0;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.top .right {
-  flex: 4 1 0;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  padding: 4px;
-}
-
-.dynamic-title {
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-.row {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.dynamic-date {
-  color: #999;
-  margin-right: 1em;
-}
-
-.delete {
-  color: #f98700;
-}
-
-.middle {
-  padding: 6px;
-}
-
-.bottom {
-  display: flex;
-}
-
-.topic-container {
-  display: flex;
-}
-
-.topic {
-  color: #f98700;
-  margin-right: 0.5em;
-}
-
-.reply,
-.like {
-  flex: 1 1 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6px;
-  border: 1px solid #f1f1f5;
-}
-
-i {
-	display:flex;
-	align-items: center;
-  margin-right: 2px;
-}
-
-.comments {
-  display: flex;
-  flex-flow: column;
-  padding: 1em;
-  background: #f2f2f2;
-  margin: 0.5em;
-}
-
-.comments-item {
-  padding: 0.5em;
-}
-
-.all-comments {
-  display: flex;
-  justify-content: center;
-  color: #f98700;
-  padding: 1em;
-}
-
-.comments-item .left {
-  color: #f98700;
-}
-
-.video {
-  width: 90%;
-  height: 75vw;
-}
+<style>
+	.dynamic-item{
+		padding:10px;
+		border-bottom:4px solid #eee;
+	}
+	.dynamic .left img{
+		width:40px;
+		height:40px;
+	}
+	.dynamic .bottom{
+		padding:8px;
+	}
+	.dynamic .bottom .left,.dynamic .bottom .right{
+		flex:1 1 0;
+		border:1px solid #f5f5f5;
+	}
 </style>

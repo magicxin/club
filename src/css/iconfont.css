@@ -6,7 +6,11 @@
   url('//at.alicdn.com/t/font_529530_xmyjkdt8qfm0lik9.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_529530_xmyjkdt8qfm0lik9.svg#iconfont') format('svg');
 }
-
+i {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
 .iconfont {
   font-family:"iconfont" !important;
   font-size:30px;
